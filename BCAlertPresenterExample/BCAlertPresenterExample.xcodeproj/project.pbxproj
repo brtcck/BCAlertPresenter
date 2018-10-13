@@ -14,6 +14,8 @@
 		5A21040C21724306008EA4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21040A21724306008EA4D2 /* LaunchScreen.storyboard */; };
 		5A21041721724306008EA4D2 /* BCAlertPresenterExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21041621724306008EA4D2 /* BCAlertPresenterExampleTests.swift */; };
 		5A21042221724306008EA4D2 /* BCAlertPresenterExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21042121724306008EA4D2 /* BCAlertPresenterExampleUITests.swift */; };
+		5A210431217243D0008EA4D2 /* BCAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A210430217243D0008EA4D2 /* BCAlertPresenter.swift */; };
+		5A210432217243D0008EA4D2 /* BCAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A210430217243D0008EA4D2 /* BCAlertPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		5A21041D21724306008EA4D2 /* BCAlertPresenterExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCAlertPresenterExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A21042121724306008EA4D2 /* BCAlertPresenterExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCAlertPresenterExampleUITests.swift; sourceTree = "<group>"; };
 		5A21042321724306008EA4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A210430217243D0008EA4D2 /* BCAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCAlertPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				5A21040821724306008EA4D2 /* Assets.xcassets */,
 				5A21040A21724306008EA4D2 /* LaunchScreen.storyboard */,
 				5A21040D21724306008EA4D2 /* Info.plist */,
+				5A21042F217243B0008EA4D2 /* BCAlertPresenter */,
 			);
 			path = BCAlertPresenterExample;
 			sourceTree = "<group>";
@@ -123,6 +127,15 @@
 				5A21042321724306008EA4D2 /* Info.plist */,
 			);
 			path = BCAlertPresenterExampleUITests;
+			sourceTree = "<group>";
+		};
+		5A21042F217243B0008EA4D2 /* BCAlertPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A210430217243D0008EA4D2 /* BCAlertPresenter.swift */,
+			);
+			name = BCAlertPresenter;
+			path = ../../BCAlertPresenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +271,7 @@
 			files = (
 				5A21040421724305008EA4D2 /* ViewController.swift in Sources */,
 				5A21040221724305008EA4D2 /* AppDelegate.swift in Sources */,
+				5A210431217243D0008EA4D2 /* BCAlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A210432217243D0008EA4D2 /* BCAlertPresenter.swift in Sources */,
 				5A21041721724306008EA4D2 /* BCAlertPresenterExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
