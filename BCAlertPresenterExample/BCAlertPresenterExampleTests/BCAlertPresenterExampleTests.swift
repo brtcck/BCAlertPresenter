@@ -10,27 +10,72 @@ import XCTest
 @testable import BCAlertPresenterExample
 
 class BCAlertPresenterExampleTests: XCTestCase {
-    
+
+    let alertPresentation = BCAlertPresentation.init(
+        title: "Hello!",
+        message: "How are you?",
+        actions: [
+            UIAlertAction(title: "Action1", style: .default, handler: nil),
+            UIAlertAction(title: "Action2", style: .default, handler: nil),
+            UIAlertAction(title: "Action3", style: .default, handler: nil)
+        ]
+    )
+    let alertPresenter = BCAlertPresenter()
+
     override func setUp() {
+
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        alertPresenter.showAlert(from: UIViewController(), presentation: alertPresentation)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAlertTitleIsEqualToPresentationTitle() {
+
+        XCTAssertEqual(alertPresenter.title ?? "", alertPresentation.title ?? "")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testAlertMessageIsEqualToPresentationMessage() {
+
+        XCTAssertEqual(alertPresenter.message ?? "", alertPresentation.message ?? "")
     }
-    
+
+    func testAlertActionsCountIsEqualToPresentationActionsCount() {
+
+        XCTAssertEqual(alertPresenter.actions?.count ?? 0, alertPresentation.actions.count)
+    }
+
+    func testAlertFirstActionTitleIsEqualToPresentationFirstActionTitle() {
+
+        XCTAssertEqual(
+            alertPresenter.actions?.first?.title ?? "",
+            alertPresentation.actions.first?.title ?? ""
+        )
+    }
+
+    func testAlertLastActionTitleIsEqualToPresentationLastActionTitle() {
+
+        XCTAssertEqual(
+            alertPresenter.actions?.last?.title ?? "",
+            alertPresentation.actions.last?.title ?? ""
+        )
+    }
+
+    func testAlertActionCount() {
+
+        XCTAssertEqual(alertPresenter.actions?.count ?? 0, 3)
+    }
+
+    func testAlertTitle() {
+
+        XCTAssertEqual(alertPresenter.title ?? "", "Hello!")
+    }
+
+    func testAlertMessage() {
+
+        XCTAssertEqual(alertPresenter.message ?? "", "How are you?")
+    }
 }
